@@ -8,28 +8,42 @@ osrf + domainfy.py -n eccouncil -t al l –  -n (domain name), -t (type)
 dnsrecon -r 162.241.216.0-162.241.216.255 – (reverse DNS) locates DNST PTR record for the range (-r) 162.241.261.0-255.
 
 ¨ Social-Network 
+
 theHarvester -d “PRT Air Force" -l 200 -b linkedin –  -d specifies the domain to search, -l specifies the number of results to be retrieved, and -b specifies the data source.
+
 orsf + usufy.py -n Mark Zuckerberg -p twitter facebook youtube – -n [target user name or profile name] is the list of nicknames to process, -p [target plaform] is(are) the target platform(s) for search. 
+
 Python3 sherlock.py Pedro Proenca – find “Pedro Proenca” on diverse URLs (eg.www.google.com/pedroproenca)
 
 ¨ Frame size  
+
 ping www.certifiedhacker.com -f -l 1500 - -f means no fragmentation and the -l sets the frame size. We need to adjust the size according to the replies (reply/need frag).
 
 ¨ Copy wordlist from site
+
 cewl -w wordlist.txt -d 2 -m 5 www.certifiedhacker.com – copies the result to worldlist.txt (-w worldlist.txt).
 
 ¨ Web Servers
+
 nc -vv www.moviescope.com 80 + GET / HTTP/1.0  – banner grabbing 
+
 telnet www.moviescope.com 80 + GET / HTTP/1.0  – banner
-grabbingskipfish -o /root/test -S /usr/share/skipfish/dictionaries/complete.wl http://10.10.10.16:8080 - test is the output directory where the result of this command will be stored in index.html in this 
-location; the complete.wl is the dictionary file based on the web server's requirements that will be used for a brute-force attack; 10.10.10.16 is the IP of the webserver. 
+
+grabbingskipfish -o /root/test -S /usr/share/skipfish/dictionaries/complete.wl http://10.10.10.16:8080 - test is the output directory where the result of this command will be stored in index.html in this location; the complete.wl is the dictionary file based on the web server's requirements that will be used for a brute-force attack; 10.10.10.16 is the IP of the webserver. 
 
 ¨ Web Applications
+
 whatweb -v www.moviescope.com
+
 whatweb --log-verbose=MovieScope_Report www.moviescope.com -this will generate a report with the name MovieScope_Report on root folder. 
+
 zaproxy > automated scan > active scan  
+
 dig + lbd yahoo.com - lbd (load balancing detector) detects if a given domain uses DNS and http load balancing via the Server: and Date: headers and the differences between server answers. It analyzes the data received from application responses to detect load balancers.
+
 wpscan --url http://10.10.10.12:8080/CEH --enumerate u - Wordpress
+
+
 auxiliary/scanner/http/wordpress_login_enum - WP password bruteforce (metasploit)
 
 ¨ Other tools and notes
