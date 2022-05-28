@@ -1,5 +1,5 @@
 # CEH-notes
-Module 2 – Footprinting and Reconnaissance
+Module 2 – Footprinting and Reconnaissance 
 theHarvester -d microsoft.com -l 200 -b google –  -d specifies the domain to search, -l specifies the number of results to be retrieved, and -b specifies the data source.
 osrf + domainfy.py -n eccouncil -t al l –  -n (domain name), -t (type)
 dnsrecon -r 162.241.216.0-162.241.216.255 – (reverse DNS) locates DNST PTR record for the range (-r) 162.241.261.0-255.
