@@ -1,5 +1,5 @@
 # Notas
-Module 2 – Footprinting and Reconnaissance 
+Footprinting and Reconnaissance 
 
 ¨ DNS
 
@@ -15,21 +15,21 @@ Module 2 – Footprinting and Reconnaissance
 
 	orsf + usufy.py -n Mark Zuckerberg -p twitter facebook youtube – -n [target user name or profile name] is the list of nicknames to process, -p [target plaform] is(are) the target platform(s) for search. 
 
-	Python3 sherlock.py Pedro Proenca – find “Pedro Proenca” on diverse URLs (eg.www.google.com/pedroproenca)
+	Python3 sherlock.py  Mike Tyson – find “Pedro Proenca” on diverse URLs (eg.www.google.com/Mike Tyson)
 
 ¨ Frame size  
 
-	ping www.certifiedhacker.com -f -l 1500 - -f means no fragmentation and the -l sets the frame size. We need to adjust the size according to the replies (reply/need frag).
+	ping www.xpto.com -f -l 1500 - -f means no fragmentation and the -l sets the frame size. We need to adjust the size according to the replies (reply/need frag).
 
 ¨ Copy wordlist from site
 
-	cewl -w wordlist.txt -d 2 -m 5 www.certifiedhacker.com – copies the result to worldlist.txt (-w worldlist.txt).
+	cewl -w wordlist.txt -d 2 -m 5 www.xpto.com – copies the result to worldlist.txt (-w worldlist.txt).
 
 ¨ Web Servers
 
-	nc -vv www.moviescope.com 80 + GET / HTTP/1.0  – banner grabbing 
+	nc -vv www.xpto.com 80 + GET / HTTP/1.0  – banner grabbing 
 
-	telnet www.moviescope.com 80 + GET / HTTP/1.0  – banner
+	telnet www.xpto.com 80 + GET / HTTP/1.0  – banner
 
 	grabbingskipfish -o /root/test -S /usr/share/skipfish/dictionaries/complete.wl http://10.10.10.16:8080 - test is the output directory where the result of this command will be stored in index.html in this location; the complete.wl is the dictionary file based on the web server's requirements that will be used for a brute-force attack; 10.10.10.16 is the IP of the webserver. 
 
@@ -131,7 +131,7 @@ Module 4 – Enumeration
 
 ¨ DNS  
 
-	dnsrecon -d www.certifiedhacker -z - --d specifies the target domain and -z specifies that the DNSSEC zone walk be performed with standard enumeration.
+	dnsrecon -d www.xpto.com -z - --d specifies the target domain and -z specifies that the DNSSEC zone walk be performed with standard enumeration.
 
 	nslookup + querytype = soa - sets the query type to SOA (Start of Authority) record to retrieve administrative information about the DNS zone of the target domain certifiedhacker.com.
 
