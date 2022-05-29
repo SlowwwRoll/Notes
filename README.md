@@ -188,6 +188,8 @@ Vulnerability Analisis
 
 ¨ Other tools and notes
 
+nmap -Pn -oN results.txt --script vuln 192.168.234.135
+
 https://www.exploit-db.com/
 
 --------------------------------------------------------------------------
