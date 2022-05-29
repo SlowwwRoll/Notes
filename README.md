@@ -239,8 +239,8 @@ System Hacking
 	SMAC
 
 ¨ SMB
-	sudo apt install smbclient > smbclient -L {IP} -U Administrator > smbclient \\\\10.10.10.131\\C$ -U Administrator
-	smbclient -N -L \\\\{TARGET_IP}\\ (no password
+	sudo apt install smbclient > smbclient -L {IP} -U Administrator > smbclient \ \ \ \10.10.10.131\ \ C$ -U Administrator
+	smbclient -N -L \ \ \ \{TARGET_IP}\ \ (no password
 
 ¨ Other tools and notes
 L0phtCrack(pass crack & audit)
