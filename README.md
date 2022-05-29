@@ -29,22 +29,21 @@ Module 2 – Footprinting and Reconnaissance
 
 	telnet www.moviescope.com 80 + GET / HTTP/1.0  – banner
 
-grabbingskipfish -o /root/test -S /usr/share/skipfish/dictionaries/complete.wl http://10.10.10.16:8080 - test is the output directory where the result of this command will be stored in index.html in this location; the complete.wl is the dictionary file based on the web server's requirements that will be used for a brute-force attack; 10.10.10.16 is the IP of the webserver. 
+	grabbingskipfish -o /root/test -S /usr/share/skipfish/dictionaries/complete.wl http://10.10.10.16:8080 - test is the output directory where the result of this command will be stored in index.html in this location; the complete.wl is the dictionary file based on the web server's requirements that will be used for a brute-force attack; 10.10.10.16 is the IP of the webserver. 
 
 ¨ Web Applications
 
-whatweb -v www.moviescope.com
+	whatweb -v www.moviescope.com
 
-whatweb --log-verbose=MovieScope_Report www.moviescope.com -this will generate a report with the name MovieScope_Report on root folder. 
+	whatweb --log-verbose=MovieScope_Report www.moviescope.com -this will generate a report with the name MovieScope_Report on root folder. 
 
-zaproxy > automated scan > active scan  
+	zaproxy > automated scan > active scan  
 
-dig + lbd yahoo.com - lbd (load balancing detector) detects if a given domain uses DNS and http load balancing via the Server: and Date: headers and the differences between server answers. It analyzes the data received from application responses to detect load balancers.
+	dig + lbd yahoo.com - lbd (load balancing detector) detects if a given domain uses DNS and http load balancing via the Server: and Date: headers and the differences between server answers. It analyzes the data received from application responses to detect load balancers.
 
-wpscan --url http://10.10.10.12:8080/CEH --enumerate u - Wordpress
+	wpscan --url http://10.10.10.12:8080/CEH --enumerate u - Wordpress
 
-
-auxiliary/scanner/http/wordpress_login_enum - WP password bruteforce (metasploit)
+	auxiliary/scanner/http/wordpress_login_enum - WP password bruteforce (metasploit)
 
 ¨ Other tools and notes
 Maltego 
@@ -58,38 +57,38 @@ Module 3 – Scanning Networks
 
 ¨ Port and Service Discovery
 
-nmap -sT (TCP), -sU (UDP),-sS (Stealth TCP), -sA (Ack), -Pn (no host, port only), -p- (all ports), -v (verbose) 
+	nmap -sT (TCP), -sU (UDP),-sS (Stealth TCP), -sA (Ack), -Pn (no host, port only), -p- (all ports), -v (verbose) 
 portscan (ack, syn,… metasploit)
 
 ¨ Host  and Version Discovery 
 
-nmap -A (aggrssive), -sV (service version)
+	nmap -A (aggrssive), -sV (service version)
 
-netdiscover r <IP of network/24>
+	netdiscover r <IP of network/24>
 
 ¨ OS Detection and SMB 
 
-nmap -O (OS), -sV (service version), --script smb-os-discovery 
+	nmap -O (OS), -sV (service version), --script smb-os-discovery 
 
-enum4linux -u martin -p apple -o 10.10.10.12 - -o OS Enumeration 
+	enum4linux -u martin -p apple -o 10.10.10.12 - -o OS Enumeration 
 
 ¨ SMB 
 
-smb_version > set RHOSTS 10.10.10.5-20 > set THREADS 11 (metasploit)
+	smb_version > set RHOSTS 10.10.10.5-20 > set THREADS 11 (metasploit)
 
-enum4linux -u martin -p apple -S 10.10.10.12 - -S Share Policy Information (SMB Shares Enumeration)
+	enum4linux -u martin -p apple -S 10.10.10.12 - -S Share Policy Information (SMB Shares Enumeration)
 
 ¨ Behind Firewall 
  
- -f (fragmentation scan), -Pn (no host), -g (source port), -D RND:10 (-D performs a decoy scan, RND generates a random and non-reserved IP addresses.
+ 	-f (fragmentation scan), -Pn (no host), -g (source port), -D RND:10 (-D performs a decoy scan, RND generates a random and non-reserved IP addresses.
 
 ¨ Web 
 
-uniscan -u http://10.10.10.16:8080/CEH -q – scans for web directories. 10.10.10.16 is the IP of Windows Server 2016. -u switch is used to provide the target URL. -q switch is used to scan the directories in the web server. - we can replace the “-q” with -we for file check and -d for dynamic scan.
+	uniscan -u http://10.10.10.16:8080/CEH -q – scans for web directories. 10.10.10.16 is the IP of Windows Server 2016. -u switch is used to provide the target URL. -q switch is used to scan the directories in the web server. - we can replace the “-q” with -we for file check and -d for dynamic scan.
 
-gobuster dir -w /usr/share/wordlists/dirb/common.tx -u 10.129.216.40
+	gobuster dir -w /usr/share/wordlists/dirb/common.tx -u 10.129.216.40
 
-nmap -sV --script=http-enum www.goodshopping.com - the target here is www.goodshopping.com
+	nmap -sV --script=http-enum www.goodshopping.com - the target here is www.goodshopping.com
 
 ¨ Other tools and notes
 
